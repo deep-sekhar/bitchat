@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/deep-sekhar/bitchat.git/static/css/main.a4ede36d.chunk.css",
+    "main.js": "/deep-sekhar/bitchat.git/static/js/main.cbc72064.chunk.js",
+    "main.js.map": "/deep-sekhar/bitchat.git/static/js/main.cbc72064.chunk.js.map",
+    "runtime-main.js": "/deep-sekhar/bitchat.git/static/js/runtime-main.1ea3385e.js",
+    "runtime-main.js.map": "/deep-sekhar/bitchat.git/static/js/runtime-main.1ea3385e.js.map",
+    "static/js/2.96b640ed.chunk.js": "/deep-sekhar/bitchat.git/static/js/2.96b640ed.chunk.js",
+    "static/js/2.96b640ed.chunk.js.map": "/deep-sekhar/bitchat.git/static/js/2.96b640ed.chunk.js.map",
+    "static/js/3.a4188195.chunk.js": "/deep-sekhar/bitchat.git/static/js/3.a4188195.chunk.js",
+    "static/js/3.a4188195.chunk.js.map": "/deep-sekhar/bitchat.git/static/js/3.a4188195.chunk.js.map",
+    "index.html": "/deep-sekhar/bitchat.git/index.html",
+    "static/css/main.a4ede36d.chunk.css.map": "/deep-sekhar/bitchat.git/static/css/main.a4ede36d.chunk.css.map",
+    "static/js/2.96b640ed.chunk.js.LICENSE.txt": "/deep-sekhar/bitchat.git/static/js/2.96b640ed.chunk.js.LICENSE.txt",
+    "static/media/Like.a5a43f39.png": "/deep-sekhar/bitchat.git/static/media/Like.a5a43f39.png",
+    "static/media/Unlike.7647eb85.png": "/deep-sekhar/bitchat.git/static/media/Unlike.7647eb85.png",
+    "static/media/newlogo.b3743e51.png": "/deep-sekhar/bitchat.git/static/media/newlogo.b3743e51.png",
+    "static/media/newlogo1.b777a8b1.png": "/deep-sekhar/bitchat.git/static/media/newlogo1.b777a8b1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ea3385e.js",
+    "static/js/2.96b640ed.chunk.js",
+    "static/css/main.a4ede36d.chunk.css",
+    "static/js/main.cbc72064.chunk.js"
+  ]
+}
