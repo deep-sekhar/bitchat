@@ -1,10 +1,10 @@
 import React from 'react'
-import Logo1 from '../images/logo.png'
+import Logo1 from '../images/newlogo.png'
 import {Link, Router} from "react-router-dom";
 
 export const Navbar = (props) => {
     const mystyles ={
-        backgroundColor:"rgb(145, 11, 254)"
+        backgroundColor:"rgb(34, 194, 42)"
     }
     
     return (

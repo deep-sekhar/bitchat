@@ -1,49 +1,18 @@
-import React from 'react'
-import { Button, Card } from 'react-bootstrap';
-import { useState, useEffect } from 'react'
+import { Button, Card,Modal } from 'react-bootstrap';
+import LikeImage from '../images/Like.png';
+import UnlikeImage from '../images/Unlike.png';
+import '../css/showpost.css';
+import React, { useState } from 'react'
 
 export const ShowPosts = (props) => {
 
-    
-    let PrevLiked;
-    if (localStorage.getItem(`${props.post.id}`)==null) {
-        PrevLiked=0;
-    }
-    else{
-        PrevLiked=parseInt(localStorage.getItem(`${props.post.id}`));
-        console.log(PrevLiked);
-    }
-    // const LastNoofLikes = ()=>{
-    //     if (localStorage.getItem(`${props.post.id}`)==null) {
-    //         PrevLiked=0;
-    //     }
-    //     else{
-    //         PrevLiked=localStorage.getItem(`${props.post.id}`);
-    //         console.log(PrevLiked);
-    //     }
-
-    // }
-
-    // const [PostLikes, setPostLikes] = useState(PrevLiked);
-
-    // const AddLikes = () => {
-    //     setPostLikes(PostLikes+1);
-    // }
-
-    // const ResetLikes =()=>{
-    //     setPostLikes(0);
-    // }
-
-    // useEffect(() => {
-    //     localStorage.setItem(`${props.post.id}`,PostLikes)
-    // }, [PostLikes]);
 
     const EditThePost = () => {
         props.SetEditedItems(props.title, props.desc);
         props.DelThePost(props.post);
     }
 
-    const DeleteThePost = ()=>{
+    const DeleteThePost = () => {
         props.DelThePost(props.post);
     }
 
@@ -60,16 +29,22 @@ export const ShowPosts = (props) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted d-flex">
-                    <di className="p-2  ">
+                    <di className="p-1">
                         <Button variant="primary" className="mx-2 MyPostsTobeShown" onClick={EditThePost}>Edit</Button>
                         <Button variant="danger" className="MyPostsTobeShown" onClick={DeleteThePost}>Delete</Button>
                     </di>
                     <div className="ms-auto p-2 bd-highlight d-flex">
-                        <div onClick={()=>{props.AddLikes(props.post)}} className="mx-2">
-                            like
+                        <div onClick={() => { props.AddLikes(props.post) }} className="mx-2">
+                            <img src={LikeImage} alt="like" className="Postimage" />
                         </div>
                         <div>
                             {props.post.likes}
+                        </div>
+                        <div onClick={() => { props.AdddisLikes(props.post) }} className="mx-2">
+                            <img src={UnlikeImage} alt="like" className="Postimage" />
+                        </div>
+                        <div>
+                            {props.post.dislikes}
                         </div>
                     </div>
                 </Card.Footer>

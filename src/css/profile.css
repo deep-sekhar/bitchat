@@ -17,21 +17,25 @@
 .profile-text{
     margin-top: 40px;
 }
-
+.footerlogo {
+    color: green;
+}
 /* ///////////////////////////////////// */
 /* Background Jhatak animations */
 .moving-glow:before, .moving-glow:after {
     content: '';
     position: absolute;
-    left: 0px;
-    top: 6px;
-    background: linear-gradient(45deg, #7500fb, #0000ff, #4ac1e6,#6aa8e2, #5b73dd, #173eec, 
-          #c505ff, #bc3cf7,#7f48ff, #bf52f1);
+    left: 19px;
+    top: 22px;
+    background: linear-gradient(45deg, #089c08, #55ff7f, #4ab418,#50d83e, #40a519, #14a037, 
+          #16cc16, #1ecc98,#1faa32, #15b315);
+    /* background: linear-gradient(45deg, #7500fb, #0000ff, #4ac1e6,#6aa8e2, #5b73dd, #173eec, 
+          #c505ff, #bc3cf7,#7f48ff, #bf52f1); */
     /* background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
           #0000ff, #00ff00,#ffff00, #ff0000); */
     background-size: 400%;
-    width: 360px;
-    height: 360px;
+    width: 320px;
+    height: 320px;
     z-index: -1;
     animation: anim-moving-glow 20s linear infinite;
     border-radius: 200px;

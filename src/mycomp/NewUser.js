@@ -28,7 +28,7 @@ export const NewUser = (props) => {
             <div>
                 <Modal show={show} onHide={handleClose} centered>
                     <Modal.Header >
-                        <Modal.Title>Sign In Error</Modal.Title>
+                        <Modal.Title>Sign Up Error</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>Pls fill all boxes properly</Modal.Body>
                     <Modal.Footer>
@@ -46,7 +46,7 @@ export const NewUser = (props) => {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                        <input value={UserEmail} onChange={e => setUserEmail(e.target.value)} type="email" className="form-control SignInItems" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        <input value={UserEmail} onChange={e => setUserEmail(e.target.value)} pattern="([a-zA-z0-9]){1,25}@([a-zA-z]){1,30}\.{1}([a-zA-z]){1,30}" placeholder="Eg: Tony@gmail.com" type="email" className="form-control SignInItems" id="exampleInputEmail1" aria-describedby="emailHelp" />
                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
@@ -55,7 +55,7 @@ export const NewUser = (props) => {
                     </div>
                     <div className="mb-3">
                         <label for="inputPassword5" className="form-label" >Password</label>
-                        <input value={PassWord} pattern="([a-zA-z]|\d){8,20}" onChange={e => setPassWord(e.target.value)} type="password" id="inputPassword5" className="form-control SignInItems" aria-describedby="passwordHelpBlock" />
+                        <input value={PassWord} pattern="([a-zA-z0-9]){8,20}" onChange={e => setPassWord(e.target.value)} type="password" id="inputPassword5" className="form-control SignInItems" aria-describedby="passwordHelpBlock" />
                         <div id="passwordHelpBlock" class="form-text">
                             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                         </div>
@@ -64,7 +64,7 @@ export const NewUser = (props) => {
                         <label for="inputPassword6" className="form-label">Confirm Password</label>
                         <input value={ConfirmNumber} onChange={e => setConfirmNumber(e.target.value)} type="password" id="inputPassword6" className="form-control SignInItems" aria-describedby="passwordHelpBlock" />
                     </div>
-                    <button type="submit" className="btn btn-dark rounded-pill" style={{ backgroundColor: "rgb(119, 7, 209)" }} >Create Account</button>
+                    <button type="submit" className="btn btn-success rounded-pill" >Create Account</button>
                     <div className="my-4">
                         <button id="NewUser" onClick={() => props.UserStateChanger(true)} type="button" >ExistingUser? Sign-in here</button>
                     </div>

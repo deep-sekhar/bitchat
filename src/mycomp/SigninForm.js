@@ -1,4 +1,4 @@
-import Logo1 from '../images/logo1.JPG'
+import Logo1 from '../images/newlogo1.png'
 import '../css/SignIn.css'
 import React, { useState, useEffect } from 'react'
 import {NewUser} from './NewUser'

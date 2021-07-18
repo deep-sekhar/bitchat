@@ -1,11 +1,12 @@
 #MyInputForm{
-    background-color: rgb(198, 188, 238);
+    background-color: rgb(113, 233, 33,0.5);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: min-content
 }
 #MyInputFormItems{
     display: flex;

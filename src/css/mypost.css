@@ -4,12 +4,6 @@
 .MyPostsTobeShown{
     border-radius: 20px;
 }
-.PostButton{
-    background-color: rgb(65, 0, 126);
-}
-.PostButton:active{
-    background-color: rgb(65, 0, 126);
-}
 
 /* ////////////////////////////////////////////// */
 /* posts displayed */
