@@ -158,10 +158,10 @@ function App() {
 
   return (
 
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar signedIn={signedIn} signInChanger={signInChanger} />
       <Switch>
-        <Route exact path="/bitchat/">
+        <Route exact path="/">
           {signedIn ?
             <div>
               {/* <div>
@@ -185,7 +185,7 @@ function App() {
               <SigninForm signedIn={signedIn} signInChanger={signInChanger} />
             </div>}
         </Route>
-        <Route path="/bitchat/Aboutus">
+        <Route path="/Aboutus">
           {signedIn ? <Aboutus /> : <SigninForm signedIn={signedIn} signInChanger={signInChanger} />}
         </Route>
       </Switch>
