@@ -1,0 +1,21 @@
+#MyInputForm{
+    background-color: rgb(198, 188, 238);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#MyInputFormItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#NewUser{
+    border-radius: 15px;
+    color: black;
+}
+.SignInItems{
+    border-radius: 15px;
+}
