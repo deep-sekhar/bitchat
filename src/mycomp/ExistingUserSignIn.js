@@ -39,12 +39,12 @@ export const ExistingUserSignIn = (props) => {
             <div className="container my-5">
                 <form onSubmit={CheckIfValid}>
                     <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label">User Name</label>
-                        <input type="text" className="form-control SignInItems" id="exampleInputEmail1" aria-describedby="emailHelp" value={UserEmail} onChange={e => setUserEmail(e.target.value)} />
+                        <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
+                        <input pattern=".*@.*\..*" type="text" className="form-control SignInItems" id="exampleInputEmail1" aria-describedby="emailHelp" value={UserEmail} onChange={e => setUserEmail(e.target.value)} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" pattern="([a-zA-z\D]){8,20}" className="form-control SignInItems" id="exampleInputPassword1" value={PassWord} onChange={e => setPassWord(e.target.value)} />
+                        <input type="password" pattern="([a-zA-z]|\d){8,20}" className="form-control SignInItems" id="exampleInputPassword1" value={PassWord} onChange={e => setPassWord(e.target.value)} />
                     </div>
                     <button type="submit" className="btn btn-dark rounded-pill" style={{ backgroundColor: "rgb(119, 7, 209)" }} >Sign In</button>
                     <div className="my-4">

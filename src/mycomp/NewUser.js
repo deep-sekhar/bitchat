@@ -55,7 +55,7 @@ export const NewUser = (props) => {
                     </div>
                     <div className="mb-3">
                         <label for="inputPassword5" className="form-label" >Password</label>
-                        <input value={PassWord} pattern="([a-zA-z\d]){8,20}" onChange={e => setPassWord(e.target.value)} type="password" id="inputPassword5" className="form-control SignInItems" aria-describedby="passwordHelpBlock" />
+                        <input value={PassWord} pattern="([a-zA-z]|\d){8,20}" onChange={e => setPassWord(e.target.value)} type="password" id="inputPassword5" className="form-control SignInItems" aria-describedby="passwordHelpBlock" />
                         <div id="passwordHelpBlock" class="form-text">
                             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                         </div>

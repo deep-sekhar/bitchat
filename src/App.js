@@ -46,6 +46,7 @@ function App() {
       title:Title,
       desc:Desc,
       mytime:MyNewTime,
+      likes:0
     };
     setPostDetails([...PostDetails,NewPost]);
     setEditTitle("");
@@ -54,14 +55,20 @@ function App() {
 
   // let ID = -2;
   const DelThePost = (post)=>{
-    // ID = post.id;
-    // console.log(ID);
     setPostDetails(PostDetails.filter(prev=>{
       return prev!==post;
     }));
-    // localStorage.setItem(`${post.id}`,0);
   }
   
+  const AddLikes = (post)=>{
+    setPostDetails(PostDetails.map(prev=>{
+      if (prev===post) {
+        prev.likes=prev.likes+1;
+      }
+      return prev;
+    }))
+  }
+
   // useEffect(() => {
   //   localStorage.setItem(ID,0);
   // }, [PostDetails])
@@ -106,18 +113,21 @@ function App() {
       title: "Hi there!",
       desc: "My Name is Deep Sekhar Ghosh. This is a sample post",
       mytime: "3:03PM"+'\xa0\xa0\xa0\xa0\xa0'+"7/2021",
+      likes:0
     },
     {
       id: 2,
       title: "Any Reviews?",
       desc: "Explore it a bit and feel free to share your reviews",
       mytime: "4:03PM"+'\xa0\xa0\xa0\xa0\xa0'+"7/2021",
+      likes:1
     },
     {
       id: 3,
       title: "Any Reviews?",
       desc: "Explore it a bit and feel free to share your review",
       mytime: WhatstheTime(),
+      likes:0
     }];
   }
   else{
@@ -128,7 +138,7 @@ function App() {
 
   const ShowAllPosts = PostDetails.map(post =>
     <ShowPosts key={post.id} title={post.title} desc={post.desc} mytime={post.mytime} DelThePost=
-    {DelThePost} post={post} SetEditedItems={SetEditedItems}/>);
+    {DelThePost} post={post} SetEditedItems={SetEditedItems} AddLikes={AddLikes}/>);
 
   useEffect(() => {    
   localStorage.setItem("posts",JSON.stringify(PostDetails));

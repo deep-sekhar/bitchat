@@ -24,19 +24,19 @@ export const ShowPosts = (props) => {
 
     // }
 
-    const [PostLikes, setPostLikes] = useState(PrevLiked);
+    // const [PostLikes, setPostLikes] = useState(PrevLiked);
 
-    const AddLikes = () => {
-        setPostLikes(PostLikes+1);
-    }
+    // const AddLikes = () => {
+    //     setPostLikes(PostLikes+1);
+    // }
 
     // const ResetLikes =()=>{
     //     setPostLikes(0);
     // }
 
-    useEffect(() => {
-        localStorage.setItem(`${props.post.id}`,PostLikes)
-    }, [PostLikes]);
+    // useEffect(() => {
+    //     localStorage.setItem(`${props.post.id}`,PostLikes)
+    // }, [PostLikes]);
 
     const EditThePost = () => {
         props.SetEditedItems(props.title, props.desc);
@@ -44,7 +44,6 @@ export const ShowPosts = (props) => {
     }
 
     const DeleteThePost = ()=>{
-        // ResetLikes();
         props.DelThePost(props.post);
     }
 
@@ -66,11 +65,11 @@ export const ShowPosts = (props) => {
                         <Button variant="danger" className="MyPostsTobeShown" onClick={DeleteThePost}>Delete</Button>
                     </di>
                     <div className="ms-auto p-2 bd-highlight d-flex">
-                        <div onClick={AddLikes} className="mx-2">
+                        <div onClick={()=>{props.AddLikes(props.post)}} className="mx-2">
                             like
-                            </div>
-                            <div>
-                            {PostLikes}
+                        </div>
+                        <div>
+                            {props.post.likes}
                         </div>
                     </div>
                 </Card.Footer>
