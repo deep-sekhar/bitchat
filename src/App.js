@@ -161,7 +161,7 @@ function App() {
     <Router>
       <Navbar signedIn={signedIn} signInChanger={signInChanger} />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/bitchat/">
           {signedIn ?
             <div>
               {/* <div>
@@ -185,7 +185,7 @@ function App() {
               <SigninForm signedIn={signedIn} signInChanger={signInChanger} />
             </div>}
         </Route>
-        <Route path="/Aboutus">
+        <Route path="/bitchat/Aboutus">
           {signedIn ? <Aboutus /> : <SigninForm signedIn={signedIn} signInChanger={signInChanger} />}
         </Route>
       </Switch>
