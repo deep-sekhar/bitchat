@@ -51,7 +51,7 @@ export const NewUser = (props) => {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="UserNumber" className="form-label">Phone Number</label>
-                        <input value={PhoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="form-control SignInItems" type="text" pattern="[0-9]{9}"  aria-label="default input example" id="UserNumber" placeholder="Ex-9345959599"></input>
+                        <input value={PhoneNumber} onChange={e => setPhoneNumber(e.target.value)} className="form-control SignInItems" type="text" pattern="[0-9]{10}"  aria-label="default input example" id="UserNumber" placeholder="Ex-9345959599"></input>
                     </div>
                     <div className="mb-3">
                         <label for="inputPassword5" className="form-label" >Password</label>
